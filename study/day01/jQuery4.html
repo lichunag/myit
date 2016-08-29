@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		.active{color: red;}
+	</style>
+</head>
+<body>
+<div id="div-box">
+<div id="box1">id为box1节点</div>
+<div id="box2">id为box2节点</div>
+<div id="box3">id为box3节点</div>
+</div>
+
+	<script src="../lib/common.js"></script>
+	<script>
+		$(function(){
+              //给获取到的节点添加class
+              //$('节点对象') .addClass('active')
+              $('#div-box').addClass('active');
+              //删去一个节点对象的class
+              $('#div-box').removeClass('active');
+              //节点有名为active的
+              // $('#div-box').toggle('active');
+              //隐藏节点属性 $('节点对象').hide()
+              $('#div-box').hide();
+              //显示节点对象 $('节点对象').show
+              $('#div-box').show();
+
+              //显示节点进行隐藏操作
+              //隐藏节点进行显示操作
+              //$('节点对象').toggle();
+              // $('#div-box').toggle();
+
+              //$('#div-box div');
+              $('#div-box div').first();
+              $('#div-box div:eq(0)');
+              $('div-box div').last();
+              
+              //获取同级别的其他节点对象,并对他们进行操作
+              //$('节点对象').siblings()
+              //对集合中第一个节点增加class,同级别的其他节点添加另外的class
+              $('#div-box div').first().addClass('myclass');
+
+              // $('#div-box div').first().addClass('active').siblings().removeClass('active');
+              $('#div-box div:eq(1)').addClass('active').siblings().removeClass('active');
+
+              // $('#div-box div:eq(1)').show().siblings().hide();
+              $('#div-box div').siblings('#box3').css('background','red');
+
+		});
+	</script>
+</body>
+</html>

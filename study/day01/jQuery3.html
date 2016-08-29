@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<div id="div-box">
+		<div class="myclass">
+			class查询的节点
+		</div>
+	</div>
+</head>
+<body>
+	<script src="../lib/common.js"></script>
+	<script>
+	//节点查询各方式的性能速度
+		$(function(){
+           //普通的查找
+           document.getElementsByClassName('myclass');
+           //最快的方式是使用id的方式
+           $("#div-box .myclass");
+           //补充最快的方式
+           //这一步是先把div存下来
+           var $el = $('#div-box');
+           var $child = $('.myclass',$el);
+           //相对于id查找慢一点
+           $("div.myclass");
+           //这一种是最慢的查询方式
+           $('.myclass');
+		})
+	</script>
+</body>
+</html>

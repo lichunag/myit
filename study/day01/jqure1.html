@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<script type="text/javascript" src="../lib/common.js"></script>	
+<script>
+//js原生
+	window.onload = function(){
+            console.log('js:' + (+ new Date()));
+	};
+	//jQuery 加载函数
+	//jQuery 语法格式
+	//$('节点').actionName();
+	$(document).ready(function(){
+             console.log('js:' + (+ new Date()));
+	});
+	//jQuery 简写形式
+	// $(function(){
+
+	// });
+</script>
+</body>
+</html>

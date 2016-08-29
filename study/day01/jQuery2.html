@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+ <div id="div-box">div节点id</div>
+ <div class="div-box">div节点class</div>
+ <div>
+ 	div 节点标签
+ </div>
+ <div mystyle = "jQuery">
+ 	自定义查询方式
+ </div>
+	<script src="../lib/common.js"></script>
+	<script>
+		$(function(){
+		var $el = 	$("#div-box");
+		//原生操作返回
+			var _el = document.getElementById('div-box');
+			//原生对象转换成jQuery对象
+			$(_el);
+			//jQuery 对象转换成
+			// $el[0];
+			var $el2 = $('.div-box');
+			$el2[0];
+			$($el2[0]);
+               //通过标签获取jQuery节点标签
+                
+               var $el3 = $('div');
+               document.getElementsByTagName('div');
+
+               //自定义节点对象
+               $('[mystyle="jQuery"]')
+
+		})
+	</script>
+</body>
+</html>

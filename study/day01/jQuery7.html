@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css" media="screen">
+		li{list-style: none;display: inline-block;padding:0px 10px;}
+		.active{background-color: red;}
+		.display{display: block;background-color: red;}
+	</style>
+</head>
+<body>
+<ul>
+	<li>1</li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+<div class="showList">
+	<span class="show one">显示内容1</span>
+	<span class="show two" style="display: none;">显示内容2</span>
+	<span class="show thren" style="display:none;">显示内容3</span>
+</div>
+	<script src="../lib/common.js"></script>
+	<script>
+	$(function(){
+      $('ul').on('click','li',function(ev){
+      	var $cur = $(ev.currentTarget);
+      	var index1 = $cur.index();
+         console.log($cur);
+      	 $cur.addClass('active').siblings().removeClass('active');
+      	
+          
+      	// $('.showList span:eq('+ index1 +')').show().siblings().hide();
+        $('.showList span').eq($cur.index()).show().siblings().hide();
+      });
+	});
+	</script>
+</body>
+</html>

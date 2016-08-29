@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+<ul>
+	<li><a>1</a></li>
+	<li>2</li>
+	<li>3</li>
+</ul>
+	<script src="../lib/common.js"></script>
+	<script>
+		$(function(){
+			// $('ul li').click(function(ev){
+			// 	//$(ev.target)  点击事件的的底层对象
+			// 	//ev.currentgarget  返回当前的点击对象
+   //               var $cur = $(ev.target);
+   //               var $cur = $(ev.currentTarget);
+   //               console.log($cur.html());
+   //               // $cur.css('background','red');
+   //               //可以连续设置多个样式，中间使用逗号隔开,样式使用键值对设置
+   //               // $cur.css({'color':'red','background':'green'});
+   //               //html()与text()区别 一个是把标签下的内容全部抛出,一个是只抛出标签里面的文本
+   //               // alert($cur.html());
+   //               alert($cur.text());
+
+
+			// });
+			// $('ul').on('click','li',function(ev){
+   //            // var $cur = $(ev.currentTarget);
+   //            // $cur.css({'background':'red','color':'green'})
+   //            // var $cur = $(ev.currentTarget);
+   //            console.log($(ev.target));
+   //            console.log($(ev.currentTarget));
+			// });
+
+			//hover 事件
+			// $('ul li').hover(function(ev){
+			// 	console.log('hover on');
+			// 	var $cur = $(ev.currentTarget);
+			// 	$cur.css({'color':'red'});
+			// },function(ev){
+			// 	console.log('hover out');
+			// 	var $cur = $(ev.currentgarget);
+			// 	$cur.css({'color':'black'});
+			// });
+			// $('ul').on('hover','li',function(ev){
+			// 	var $cur = $(ev.currentTarget);
+			// 	$cur.css({'color':'red'});
+			// });
+			//.index()获取当前函数的下标
+
+			$('ul').on('click','li',function(ev){
+				// var $cur = $(ev.currentgarget);
+				console.log($(ev.target));
+				console.log($(ev.currentgarget));
+				//在哪绑定在哪取消
+				// $('ul').off('click');
+			});
+		});
+
+	</script>
+</body>
+</html>
